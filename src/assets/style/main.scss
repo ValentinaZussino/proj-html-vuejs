@@ -19,9 +19,15 @@ ul{
 a {
     text-decoration: none;
 }
+h3 {
+    color: $black;
+    text-transform: capitalize;
+    font-weight: bold;
+}
 img {max-width: 100%;}
 .vz_container {
     width: 80%;
+    // verifica poi se usati effettivamente tutti con m 0 auto allora spostare qui
 }
 .blue-btn {
     background-color: $blue;
@@ -35,4 +41,17 @@ img {max-width: 100%;}
     border: none;
     // height: 35px;
     // line-height: 0px;
+}
+.transp-btn-jumbo {
+    color: $white;
+    border: 1px solid $white;
+    background-color:rgba(252, 252, 252, 0.143);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 9px 22px;
+    border-radius: 13px;
+}
+.transp-btn{
+
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="vz_container bottom-header">
         <!-- header bottom left -->
-        <div class="logo-header"><img src="../../public/img/classic_shop_logo1x.png" alt="logo avada shop"></div>
+        <div class="logo-header"><img src="/img/classic_shop_logo1x.png" alt="logo avada shop"></div>
         <!-- header bottom right -->
         <div class="nav-bottom-header">
             <nav>
