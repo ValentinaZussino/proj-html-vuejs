@@ -8,6 +8,10 @@ $fa-font-path: '../webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 body {
-    background-color: $black;
-    color: $white;
+    background-color: $white;
+    color: $textcolor;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.vz_container {
+    width: 1170px;
 }
