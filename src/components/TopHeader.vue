@@ -10,7 +10,7 @@
 
         <!-- header top right -->
         <nav>
-            <div class="text-capitalize"><a href="">shopping cart</a></div>
+            <div class="text-capitalize"><a href="#">shopping cart</a></div>
             <div class="text-capitalize">my account<i class="fa-solid fa-chevron-down ps-2"></i></div>
             <div class="text-uppercase"><i class="fa-solid fa-cart-shopping pe-2"></i>cart<i class="fa-solid fa-chevron-down ps-2"></i></div>
         </nav>
@@ -58,8 +58,8 @@
         div:last-of-type {
             color: $black;
             background-color: $lightgray;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding-left: 45px;
+            padding-right: 45px;
             border:none;
         }
     }

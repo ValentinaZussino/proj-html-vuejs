@@ -6,29 +6,17 @@
         </div>
         <!-- header bottom -->
         <div class="bottom-header-outer">
-            <div class="vz_container bottom-header">
-                <!-- header bottom left -->
-                <div><img src="" alt=""></div>
-                <!-- header bottom right -->
-                <div>
-                    <nav>
-                        <ul>
-                            <li></li>
-                        </ul>
-                    </nav>
-                    <button></button>
-                    <button></button>
-                </div>
-            </div>
+            <BottomHeader/>
         </div>
     </header>
 </template>
 
 <script>
+import BottomHeader from './BottomHeader.vue';
 import TopHeader from './TopHeader.vue'
     export default {
         name: 'HeaderComponent',
-        components: {TopHeader}
+        components: { TopHeader, BottomHeader }
     }
 </script>
 
@@ -45,13 +33,6 @@ import TopHeader from './TopHeader.vue'
 .bottom-header-outer {
     height: 100px;
     width: 100%;
-    border: 1px solid blue;
-}
-.bottom-header {
-    @include dflex('between');
-    height: 100%;
-    margin: 0 auto;
-    border: 1px solid red;
 }
 
 </style>
