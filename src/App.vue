@@ -3,6 +3,7 @@
   <main>
     <JumboComponent/>
     <FeaturedProducts/>
+    <DividerCollections/>
     <BestSellers/>
     <NewArrivals/>
     <OurBlog/>
@@ -18,9 +19,10 @@ import FeaturedProducts from './components/FeaturedProducts.vue';
 import BestSellers from './components/BestSellers.vue';
 import NewArrivals from './components/NewArrivals.vue';
 import OurBlog from './components/OurBlog.vue';
+import DividerCollections from './components/DividerCollections.vue';
 
   export default {
-    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog},
+    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog, DividerCollections },
     data(){
       return {
       }

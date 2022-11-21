@@ -52,6 +52,13 @@ img {max-width: 100%;}
     padding: 9px 22px;
     border-radius: 13px;
 }
-.transp-btn{
-
+.transp-btn {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 15px;
+    width: 35%;
+    padding: 5px 12px;
 }
