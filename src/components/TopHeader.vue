@@ -48,7 +48,7 @@
             height: 100%;
             @include dflex('center');
             padding: 13px 10px;
-            border-right: 2px solid $lightgray;
+            border-right: 1px solid $lightgray;
 
             a {color:rgb(144, 146, 141)}
 
@@ -57,7 +57,7 @@
 
         div:last-of-type {
             color: $black;
-            background-color: $lightgray;
+            background-color: $softgray;
             padding-left: 45px;
             padding-right: 45px;
             border:none;

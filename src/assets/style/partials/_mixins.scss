@@ -11,3 +11,7 @@
     display: flex;
     align-items: center;
 }
+@mixin dflex-column(){
+    display: flex;
+    flex-direction: column;
+}

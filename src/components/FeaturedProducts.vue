@@ -1,17 +1,46 @@
 <template>
     <section>
         <div class="vz_container ">
+            <!-- title -->
             <div class="section-title">
                 <h3>Featured Products</h3>
                 <p>Must have products from our top sellers</p>
+            </div>
+            <!-- preview featured -->
+            <div class="featured">
+                <!-- categories -->
+                <div class="tabs-categories">
+                    <div v-for="(category, index) in store.previewCategories" :key="index">{{category}}</div>
+                </div>
+                <!-- preview -->
+                <div class="w-100 d-flex">
+                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewCards" :key="index">
+                        <!-- img -->
+                        <div class="preview-img"><img :src="card.img" :alt="card.product"></div>
+                        <!-- description -->
+                        <div class="preview-description">
+                            <span class="prod-name">{{card.product}}</span>
+                            <br>
+                            <span class="prod-categ">{{card.categories}}</span>
+                            <br>
+                            <span class="prod-cost">&#36;{{card.cost}}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import {store} from '../store'
     export default {
         name: 'FeaturedProducts',
+        data(){
+            return {
+                store
+            }
+        }
     }
 </script>
 
@@ -21,12 +50,11 @@
 
 section {
     width: 100%;
-    height: 420px;
-    border: 1px solid red;
 
     div.vz_container {
         border-top: 2px solid $lightgray;
         margin: 70px auto;
+        padding-top:  100px;
         position: relative;
 
         .section-title {
@@ -35,13 +63,48 @@ section {
             text-align: center;
             background-color: $white;
             position: absolute;
-            top: 50%;
+            top: -20px;
             left: 50%;
-            transform: translate(-50%, -23%);
-            border: 1px solid green;
+            transform: translate(-50%);
 
             p {
                 font-size: 13px;
+            }
+        }
+        .featured {
+            width: 100%;
+
+            .tabs-categories {
+                width: 35%;
+                height: 40px;
+                margin: 0 auto;
+                @include dflex('center');
+                border-top: 1px solid $lightgray;
+                border-bottom: 1px solid $lightgray;
+                border-left: 1px solid $lightgray;
+
+                div {
+                    flex-grow: 1;
+                    height: 100%;
+                    text-align: center;
+                    font-size: 13px;
+                    font-weight: bold;
+                    line-height: 35px;
+                    background-color: $softgray;
+                    border-right: 1px solid $lightgray;
+
+                    &:first-of-type {background-color: $white;}
+                }
+            }
+            .preview-card {
+                padding-right: 20px;
+                
+                .preview-description {
+                    padding-top: 10px;
+                    .prod-name {font-size: 13px; font-weight: bold; text-transform: capitalize;}
+                    .prod-categ {font-size: 11px;}
+                    .prod-cost {font-size: 13px; color:$blue}
+                }
             }
         }
     }

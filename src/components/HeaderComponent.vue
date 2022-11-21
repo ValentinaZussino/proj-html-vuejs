@@ -28,7 +28,7 @@ import TopHeader from './TopHeader.vue'
     width: 100%;
     height: 45px;
     border-top: 2px solid $blue;
-    border-bottom: 2px solid $lightgray;
+    border-bottom: 1px solid $lightgray;
 }
 .bottom-header-outer {
     height: 100px;

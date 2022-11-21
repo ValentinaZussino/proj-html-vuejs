@@ -35,9 +35,9 @@ section {
             text-align: center;
             background-color: $white;
             position: absolute;
-            top: 50%;
+            top: -20px;
             left: 50%;
-            transform: translate(-50%, -23%);
+            transform: translate(-50%);
             border: 1px solid green;
 
             p {
