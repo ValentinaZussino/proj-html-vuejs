@@ -81,5 +81,97 @@ export const store = reactive ({
             comments: '0 comments',
             intro: 'Donec finibus sit amet orci eget ultricies. Praesent posuere nate ut erat fringilla,'
         }
+    ],
+    featuredOverview: [
+        {
+            product:'black jacket',
+            rate: '',
+            oldcost: '',
+            cost: '215',
+            img: '/img/black_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'black leather jacket',
+            rate: '10',
+            oldcost: '235',
+            cost: '200',
+            img: '/img/black_elegant_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'hipster black top',
+            rate: '',
+            oldcost: '',
+            cost: '57',
+            img: '/img/hipster_black_top-120x156.jpg'
+        }
+    ],
+    onsaleOverview: [
+        {
+            product:'black leather jacket',
+            rate: '10',
+            oldcost: '235',
+            cost: '200',
+            img: '/img/black_elegant_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'blue leather jacket',
+            rate: '',
+            oldcost: '80',
+            cost: '60',
+            img: '/img/blue_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'modern leather boots',
+            rate: '',
+            oldcost: '50',
+            cost: '30',
+            img: '/img/modern_leather_boots-120x156.jpg'
+        }
+    ],
+    ratedOverview: [
+        {
+            product:'leather gloves',
+            rate: '10',
+            oldcost: '',
+            cost: '200',
+            img: '/img/leather_gloves-120x156.jpg'
+        },
+        {
+            product:'black leather jacket',
+            rate: '10',
+            oldcost: '235',
+            cost: '200',
+            img: '/img/black_elegant_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'spring printed dress',
+            rate: '10',
+            oldcost: '',
+            cost: '47',
+            img: '/img/spring_printed_dress-120x156.jpg'
+        }
+    ],
+    reviewsOverview: [
+        {
+            product:'black leather jacket',
+            rate: '10',
+            oldcost: '235',
+            cost: '200',
+            img: '/img/black_elegant_leather_jacket-120x156.jpg'
+        },
+        {
+            product:'leather gloves',
+            rate: '10',
+            oldcost: '',
+            cost: '200',
+            img: '/img/leather_gloves-120x156.jpg'
+        },
+        {
+            product:'spring printed dress',
+            rate: '10',
+            oldcost: '',
+            cost: '47',
+            img: '/img/spring_printed_dress-120x156.jpg'
+        }
     ]
 })
