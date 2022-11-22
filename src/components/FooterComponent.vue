@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <footer>
         <FooterTop/>
         <FooterBottom/>
-    </div>
+    </footer>
 </template>
 
 <script>
@@ -16,5 +16,8 @@ import FooterBottom from './FooterBottom.vue';
 </script>
 
 <style lang="scss" scoped>
+footer {
+    overflow: hidden;
+}
 
 </style>
