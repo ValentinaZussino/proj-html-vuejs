@@ -12,6 +12,11 @@
                 </div>
                 <div class="box-offers">
                     <img src="/img/promo_box_2_bg.jpg" alt="">
+                    <div class="offers-text">
+                        <h3>free shipping</h3>
+                        <span>Vivamus temp leor lacus, feugiat ut magna aliquam erat.</span>
+                        <button class="transp-btn">view more</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,14 +42,13 @@ section {
     #confetti {
         width: 100%;
         height: 230px;
-        border: 1px solid black;
         background-image: url('/img/bkgd_confetti-compressor.jpg');
         background-position:center;
+        background-size: cover;
         background-repeat: repeat;
         position: relative;
     }
     div.vz_container {
-        border: 1px solid blue;
         height: 270px;
         position: absolute;
         top: 0;
@@ -53,10 +57,9 @@ section {
         @include dflex('between');
 
         .box-offers{
-            width: 47%;
+            width: 48%;
             height: 100%;
             position: relative;
-            border: 1px solid black;
 
             img {
                 width: 100%;
@@ -72,7 +75,6 @@ section {
                 align-items: flex-start;
                 color: $white;
                 line-height: 1.8;
-                border: 1px solid yellow;
 
                 h3{ color: $white; font-size: 23px;}
 
