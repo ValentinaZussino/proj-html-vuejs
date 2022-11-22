@@ -22,7 +22,6 @@
 section {
     width: 100%;
     height: 420px;
-    border: 1px solid red;
 
     div.vz_container {
         border-top: 2px solid $lightgray;
