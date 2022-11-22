@@ -58,5 +58,28 @@ export const store = reactive ({
             collection: 'autumn collection',
             subtitle: 'rich and comfortable'
         }
+    ],
+    blogPosts: [
+        {
+            img: '/img/post_img_12-320x202.jpg',
+            title: 'Aenean lobortis sapien enim viverra',
+            date: 'september 9th, 2015',
+            comments: '0 comments',
+            intro: 'Donec finibus sit amet orci eget ultricies. Praesent posuere nate ut erat fringilla,'
+        },
+        {
+            img: '/img/post_img_11-320x202.jpg',
+            title: 'Duis ac massa semper maximus',
+            date: 'september 9th, 2015',
+            comments: '0 comments',
+            intro: 'Donec finibus sit amet orci eget ultricies. Praesent posuere nate ut erat fringilla,'
+        },
+        {
+            img: '/img/post_img_10-320x202.jpg',
+            title: 'Nunc fermint nulla eu justo sem id',
+            date: 'september 9th, 2015',
+            comments: '0 comments',
+            intro: 'Donec finibus sit amet orci eget ultricies. Praesent posuere nate ut erat fringilla,'
+        }
     ]
 })

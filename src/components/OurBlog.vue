@@ -6,40 +6,16 @@
                 <p>The latest Classic Shop news</p>
             </div>
             <div class="w-100 d-flex">
-                <div class="blog-card ">
+                <div class="blog-card" v-for="(post, index) in store.blogPosts" :key="index">
                     <!-- img -->
-                    <div class="w-100"><img src="/img/post_img_12-320x202.jpg" alt="" class="w-100"></div>
+                    <div class="w-100"><img :src="post.img" :alt="post.title" class="w-100"></div>
                     <!-- description -->
                     <div class="blog-description">
-                        <span class="blog-title">hahah</span>
+                        <span class="blog-title">{{post.title}}</span>
                         <div class="date-comments">    
-                            <span>hohoh |</span><span> hihih</span>
+                            <span>{{post.date}} | </span><span>{{post.comments}}</span>
                         </div>
-                        <p class="blog-intro">eheheh</p>
-                    </div>
-                </div>
-                <div class="blog-card middle-card">
-                    <!-- img -->
-                    <div class="w-100"><img src="/img/post_img_11-320x202.jpg" alt="" class="w-100"></div>
-                    <!-- description -->
-                    <div class="blog-description">
-                        <span class="blog-title">hahah</span>
-                        <div class="date-comments">    
-                            <span>hohoh |</span><span> hihih</span>
-                        </div>
-                        <p class="blog-intro">eheheh</p>
-                    </div>
-                </div>
-                <div class="blog-card ">
-                    <!-- img -->
-                    <div class="w-100"><img src="/img/post_img_10-320x202.jpg" alt="" class="w-100"></div>
-                    <!-- description -->
-                    <div class="blog-description">
-                        <span class="blog-title">hahah</span>
-                        <div class="date-comments">    
-                            <span>hohoh |</span><span> hihih</span>
-                        </div>
-                        <p class="blog-intro">eheheh</p>
+                        <p class="blog-intro">{{post.intro}}</p>
                     </div>
                 </div>
             </div>
@@ -48,8 +24,14 @@
 </template>
 
 <script>
+import {store} from '../store'
     export default {
         name: 'OurBlog',
+        data() {
+            return {
+                store
+            }
+        },
     }
 </script>
 
@@ -65,7 +47,6 @@ section {
         margin: 70px auto;
         padding-top:  100px;
         position: relative;
-        border: 1px solid red;
 
         .section-title {
             width: 35%;
@@ -76,27 +57,26 @@ section {
             top: -20px;
             left: 50%;
             transform: translate(-50%);
-            border: 1px solid green;
 
             p {
                 font-size: 13px;
             }
         }
         .blog-card {
+            padding: 0 5px;
             width: calc(100% / 3);
-            border: 1px solid green;
             
             .blog-description {
                 padding-top: 10px;
 
-                .blog-title {font-size: 13px; font-weight: bold; text-transform: capitalize;}
+                .blog-title {font-size: 13px; font-weight: bold;}
                 .date-comments {font-size: 11px; color: $textgraycolor; margin-bottom: 10px;}
-                .blog-intro {font-size: 13px; color: $textgraycolor;}
+                .blog-intro {font-size: 12px; color: $textgraycolor;}
             }
         }
-        .middle-card {
-            margin: 0 10px;
-        }
+        // .middle-card {
+        //     margin: 0 10px;
+        // }
     }
 }
 </style>
