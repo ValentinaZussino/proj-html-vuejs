@@ -1,20 +1,12 @@
 <template>
     <section class="d-flex">
-        <div class="col-lg-4 collection-col">
-            <img src="/img/winter_collection_bg.jpg" alt="">
+        <div class="col-lg-4 collection-col" v-for="(card, index) in store.collections">
+            <img :src="card.img" :alt="card.collection">
             <div class="collection-text">
-                <h3>winter collection</h3>
-                <span>stylish and warm </span>
-                <button class="transp-btn mt-2">view more</button>
+                <h3>{{card.collection}}</h3>
+                <span>{{card.subtitle}}m </span>
+                <button class="transp-btn">view more</button>
             </div>
-        </div>
-        <div class="col-lg-4">
-            <img src="/img/winter_collection_bg.jpg" alt="">
-            <div></div>
-        </div>
-        <div class="col-lg-4">
-            <img src="/img/winter_collection_bg.jpg" alt="">
-            <div></div>
         </div>
     </section>
 </template>
@@ -44,18 +36,17 @@ section {
 
         .collection-text{
             position: absolute;
-            bottom: 60px;
+            bottom: 50px;
             left: 50%;
             transform: translate(-50%);
             width: 70%;
             @include dflex-column;
             align-items: center;
             color: $white;
-            border: 1px solid yellow;
 
-            h3{ color: $white; font-size: 25px;}
+            h3{ color: $white; font-size: 23px;}
 
-            span { text-transform: uppercase; font-size: 12px;}
+            span { text-transform: uppercase; font-size: 11px; letter-spacing: 1px; padding: 0px 0px 15px 0px;}
         }
     }
 }

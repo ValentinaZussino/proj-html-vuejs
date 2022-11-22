@@ -41,5 +41,22 @@ export const store = reactive ({
             cost: '96'
         },
         
+    ],
+    collections: [
+        {
+            img: '/img/winter_collection_bg.jpg',
+            collection: 'winter collection',
+            subtitle: 'stylish and warm'
+        },
+        {
+            img: '/img/spring_collection_bg.jpg',
+            collection: 'spring collection',
+            subtitle: 'bright and colorfull'
+        },
+        {
+            img: '/img/autumn_collection_bg.jpg',
+            collection: 'autumn collection',
+            subtitle: 'rich and comfortable'
+        }
     ]
 })

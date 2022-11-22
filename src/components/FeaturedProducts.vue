@@ -23,7 +23,7 @@
                             <br>
                             <span class="prod-categ">{{card.categories}}</span>
                             <br>
-                            <span class="prod-cost">&#36;{{card.cost}}</span>
+                            <span class="prod-cost"><span class="oldcost" v-if="card.oldcost">&#36;{{card.oldcost}}</span> &#36;{{card.cost}}</span>
                         </div>
                     </div>
                 </div>
@@ -103,6 +103,7 @@ section {
                     padding-top: 10px;
                     .prod-name {font-size: 13px; font-weight: bold; text-transform: capitalize;}
                     .prod-categ {font-size: 11px;}
+                    .oldcost {font-size: 11px; text-decoration: line-through;}
                     .prod-cost {font-size: 13px; color:$blue}
                 }
             }
