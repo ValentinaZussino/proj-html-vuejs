@@ -11,6 +11,7 @@
     <OurBlog/>
     <OverviewSection/>
     <BrandsSection/>
+    <SubscribeComponent/>
   </main>
   <FooterComponent/>
 </template>
@@ -28,9 +29,10 @@ import DividerOffers from './components/DividerOffers.vue';
 import DividerTestimonials from './components/DividerTestimonials.vue';
 import OverviewSection from './components/OverviewSection.vue';
 import BrandsSection from './components/BrandsSection.vue';
+import SubscribeComponent from './components/SubscribeComponent.vue';
 
   export default {
-    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog, DividerCollections, DividerOffers, DividerTestimonials, OverviewSection, BrandsSection},
+    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog, DividerCollections, DividerOffers, DividerTestimonials, OverviewSection, BrandsSection, SubscribeComponent},
     data(){
       return {
       }
