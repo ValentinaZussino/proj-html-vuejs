@@ -4,7 +4,7 @@
             <img :src="card.img" :alt="card.collection">
             <div class="collection-text">
                 <h3>{{card.collection}}</h3>
-                <span>{{card.subtitle}}m </span>
+                <span>{{card.subtitle}}</span>
                 <button class="transp-btn">view more</button>
             </div>
         </div>
