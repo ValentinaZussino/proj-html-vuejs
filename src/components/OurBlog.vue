@@ -63,7 +63,7 @@ section {
             }
         }
         .blog-card {
-            padding: 0 5px;
+            padding: 0 7px;
             width: calc(100% / 3);
             
             .blog-description {
