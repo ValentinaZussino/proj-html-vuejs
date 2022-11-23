@@ -1,27 +1,30 @@
 <template>
     <section>
         <!-- central container -->
-        <!-- first jumbo -->
-        <div class="w-100 h-100 first-j" v-if="counter == 0">
-            <div class="new-collection-jumbo" >
-                <h1>brand new arrivals</h1>
-                <p>new collection from newyork</p>
-                <div>
-                    <button class="transp-btn-jumbo">view all</button>
-                    <button class="transp-btn-jumbo">lookbook</button>
+        <Transition>
+             <!-- first jumbo -->
+            <div class="w-100 h-100 first-j" v-if="counter == 0">
+                <div class="new-collection-jumbo" >
+                    <h1>brand new arrivals</h1>
+                    <p>new collection from newyork</p>
+                    <div>
+                        <button class="transp-btn-jumbo">view all</button>
+                        <button class="transp-btn-jumbo">lookbook</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- second jumbo -->
-        <div class="w-100 h-100 second-j" v-if="counter == 1">
-            <div class="new-collection-jumbo" >
-                <h1>avada classic shop</h1>
-                <p>show your products with style</p>
-                <div>
-                    <button class="transp-btn-jumbo">get avada now</button>
+            <!-- second jumbo -->
+            <div class="w-100 h-100 second-j" v-else>
+                <div class="new-collection-jumbo" >
+                    <h1>avada classic shop</h1>
+                    <p>show your products with style</p>
+                    <div>
+                        <button class="transp-btn-jumbo">get avada now</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Transition>
+        
         <!-- little squares -->
         <div class="little-squares-jumbo">
             <div><i class="fa-solid fa-images"></i><span>Demos</span></div>
@@ -71,18 +74,31 @@ section {
     width: 100%;
     color: $white;
     position: relative;
-
+    .v-enter-active, 
+    .v-leave-active {
+        transition: opacity 0.7s ease-in-out;
+    }
+    .v-enter-from, 
+    .v-leave-to {
+        opacity: 0;
+    }
+    .v-enter-to,
+    .v-leave-from {
+        opacity: 1;
+    }
     .first-j {
         background-image: url('/img/home1_slide_three_bg_2.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        position: absolute;
     }
     .second-j {
         background-image: url('/img/home1_slide_one_bg.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        position: absolute;
     }
     .new-collection-jumbo {
         width: 50%;
