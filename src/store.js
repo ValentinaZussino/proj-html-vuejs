@@ -9,6 +9,37 @@ export const store = reactive ({
         'News',
         'Elements'
     ],
+    navLink: [
+        {
+            title: 'Home',
+            links: ['Home 1', 'Home 2'],
+            hover: false
+        },
+        {
+            title: 'Shop',
+            links: ['Link 1', 'Link 2', 'Link 3'],
+            hover: false
+        },
+        {
+            title: 'Products',
+            links: ['Link 1', 'Link 2', 'Link 3'],
+            hover: false
+        },
+        {
+            title: 'Categories',
+            links: ['Link 1', 'Link 2', 'Link 3'],
+            hover: false
+        },{
+            title: 'News',
+            links: [],
+            hover: false
+        },
+        {
+            title: 'Elements',
+            links: ['Link 1', 'Link 2'],
+            hover: false
+        }
+    ],
     previewCategories: [
         'Men',
         'Women',
