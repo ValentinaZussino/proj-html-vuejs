@@ -33,7 +33,15 @@ section {
     .collection-col {
         height: 100%;
         position: relative;
+        cursor: pointer;
 
+        img{
+            transition: 1s;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
         .collection-text{
             position: absolute;
             bottom: 50px;

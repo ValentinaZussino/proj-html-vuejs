@@ -6,7 +6,7 @@
         <div class="nav-bottom-header">
             <nav>
                 <ul class="main-ul">
-                    <li class="main-li" v-for="(link, index) in store.navLink" :key="index" @mouseover="link.hover = true"
+                    <li class="main-li" v-for="(link, index) in store.navLinks" :key="index" @mouseover="link.hover = true"
                         @mouseleave="link.hover = false"><a href="#">{{link.title}}</a><i class="fa-solid fa-chevron-down ps-2" v-if="link.title != 'News'"></i>
                         <div class="dropd" v-if="link.hover">
                             <ul class="child-ul">
@@ -78,7 +78,7 @@ import {store} from '../store'
                     }
 
                     &:first-of-type {
-                        border-top: 3px solid $blue;
+                        border-top: 2px solid $blue;
                         color: $blue;
 
                         a { color: $blue}

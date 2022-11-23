@@ -8,7 +8,7 @@
             <div class="w-100 d-flex">
                 <div class="blog-card" v-for="(post, index) in store.blogPosts" :key="index">
                     <!-- img -->
-                    <div class="w-100"><img :src="post.img" :alt="post.title" class="w-100"></div>
+                    <div class="w-100 blog-img"><img :src="post.img" :alt="post.title" class="w-100"></div>
                     <!-- description -->
                     <div class="blog-description">
                         <span class="blog-title">{{post.title}}</span>
@@ -65,7 +65,18 @@ section {
         .blog-card {
             padding: 0 7px;
             width: calc(100% / 3);
-            
+            .blog-img{
+                overflow: hidden;
+                
+                img {
+                transition: 1s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.2);
+                        opacity: 0.95;
+                    }
+                }
+            }
             .blog-description {
                 padding-top: 10px;
 
@@ -74,9 +85,6 @@ section {
                 .blog-intro {font-size: 12px; color: $textgraycolor;}
             }
         }
-        // .middle-card {
-        //     margin: 0 10px;
-        // }
     }
 }
 </style>
