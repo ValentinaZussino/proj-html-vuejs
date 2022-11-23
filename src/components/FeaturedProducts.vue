@@ -17,7 +17,8 @@
                     <!-- MEN -->
                     <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewMenCards" :key="index" v-show="show == 'Men'">
                         <!-- img -->
-                        <div class="preview-img"><img :src="card.img" :alt="card.product">
+                        <div class="preview-img">
+                            <img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
                                 <div class="add-details">
                                     <span><i class="fa-solid fa-cart-shopping pe-2"></i>Add to cart</span>
@@ -37,7 +38,8 @@
                     <!-- WOMEN -->
                     <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewWomenCards" :key="index" v-show="show == 'Women'">
                         <!-- img -->
-                        <div class="preview-img"><img :src="card.img" :alt="card.product">
+                        <div class="preview-img">
+                            <img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
                                 <div class="add-details">
                                     <span><i class="fa-solid fa-cart-shopping pe-2"></i>Add to cart</span>

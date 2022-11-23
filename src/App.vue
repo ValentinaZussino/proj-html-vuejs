@@ -14,6 +14,7 @@
     <SubscribeComponent/>
   </main>
   <FooterComponent/>
+  <ToTop/>
 </template>
 
 <script>
@@ -30,9 +31,10 @@ import DividerTestimonials from './components/DividerTestimonials.vue';
 import OverviewSection from './components/OverviewSection.vue';
 import BrandsSection from './components/BrandsSection.vue';
 import SubscribeComponent from './components/SubscribeComponent.vue';
+import ToTop from './components/ToTop.vue';
 
   export default {
-    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog, DividerCollections, DividerOffers, DividerTestimonials, OverviewSection, BrandsSection, SubscribeComponent},
+    components: { HeaderComponent, FooterComponent, JumboComponent, FeaturedProducts, BestSellers, NewArrivals, OurBlog, DividerCollections, DividerOffers, DividerTestimonials, OverviewSection, BrandsSection, SubscribeComponent, ToTop},
     data(){
       return {
       }

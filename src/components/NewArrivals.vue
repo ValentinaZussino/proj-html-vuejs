@@ -11,6 +11,12 @@
             <div class="carousel-container" ref="carousel">
                 <div class="carousel-card" v-for="(slide, index) in store.slideBestsellers">
                     <img :src="slide.img" alt="" class="h-100">
+                    <div class="vz_overlay">
+                        <div class="add-details">
+                            <span><i class="fa-solid fa-cart-shopping pe-2"></i>Add to cart</span>
+                            <span><i class="fa-solid fa-bars pe-2"></i>Details</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- arrows -->
@@ -101,6 +107,37 @@ section {
         .carousel-card {
             width: calc(100% / 5);
             flex-shrink: 0;
+            position: relative;
+            cursor: pointer;
+
+            .vz_overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                background: linear-gradient(rgba(82, 136, 211, 0.855), rgba(253, 148, 110, 0.855));
+                opacity: 0;
+                transition: opacity 0.5s, height 0.5s;
+                transition-timing-function: ease-in-out;
+
+                .add-details{
+                    position:absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $white;
+                    text-align: center;
+                    font-size: 13px;
+
+                    span { display: block; margin-bottom: 15px;}
+                }
+            }
+
+            &:hover .vz_overlay {
+                height: 100%;
+                opacity: 1;
+            }
         }
     }
     .left-arrow {
