@@ -7,13 +7,15 @@
             </div>
         </div>
         <!-- carousel -->
-        <div class="carousel-container">
-            <div class="carousel-card" v-for="(slide, index) in store.slideBestsellers">
-                <img :src="slide.img" alt="" class="h-100">
+        <div class="position-relative overflow-hidden">
+            <div class="carousel-container" ref="carousel">
+                <div class="carousel-card" v-for="(slide, index) in store.slideBestsellers">
+                    <img :src="slide.img" alt="" class="h-100">
+                </div>
             </div>
             <!-- arrows -->
-            <div class="left-arrow">a</div>
-            <div class="right-arrow">a</div>
+            <div class="left-arrow" @click="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="right-arrow" @click="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
         </div>
     </section>
 </template>
@@ -24,9 +26,38 @@ import {store} from '../store';
         name: 'NewArrivals',
         data() {
             return {
-                store
+                store,
+                counter: 0
             }
         },
+        methods: {
+            scrollRight(){
+                if(this.counter < 5){
+                    this.counter++ ;
+                    this.$nextTick(()=>{
+                        this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
+                    });
+                } else {
+                    this.counter = 0 ;
+                    this.$nextTick(()=>{
+                        this.$refs.carousel.style.transform = null;
+                    });
+                }
+            },
+            scrollLeft(){
+                if(this.counter > 0){
+                    this.counter-- ;
+                    this.$nextTick(()=>{
+                        this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
+                    });
+                } else {
+                    this.$nextTick(() => { 
+                        this.$refs.carousel.style.transform = `translateX(80px)`; 
+                        setTimeout(() => this.$refs.carousel.style.transform = null, 200);
+                    });
+                }
+            }
+        }
     }
 </script>
 
@@ -60,38 +91,42 @@ section {
         }
     }
     .carousel-container {
-            width: 100%;
-            display: flex;
-            position: relative;
+        width: 100%;
+        display: flex;
+        transition: 1s;
 
-            .carousel-card {
-                width: calc(100% / 5);
-            }
-
-            .left-arrow {
-                width: 50px;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.503);
-                color: white;
-                text-align: center;
-                line-height: 50px;
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%);
-            }
-            .right-arrow {
-                width: 50px;
-                height: 50px;
-                background-color: rgba(0, 0, 0, 0.503);
-                color: white;
-                text-align: center;
-                line-height: 50px;
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translate(0, -50%);
-            }
+        .carousel-card {
+            width: calc(100% / 5);
+            flex-shrink: 0;
         }
+    }
+    .left-arrow {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(0, 0, 0, 0.503);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
+    .right-arrow {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(0, 0, 0, 0.503);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+    }
 }
 </style>

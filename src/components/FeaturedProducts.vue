@@ -10,13 +10,13 @@
             <div class="featured">
                 <!-- categories -->
                 <div class="tabs-categories">
-                    <div v-for="(category, index) in store.previewCategories" :key="index">{{category}}</div>
+                    <div v-for="(category, index) in store.previewCategories" :key="index" @click="show = category" :class="{'bgr-white' : category == show}">{{category}}</div>
                 </div>
                 <!-- preview -->
                 <div class="w-100 d-flex">
                     <!-- MEN -->
-                    <!-- <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewMenCards" :key="index">
-                        img
+                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewMenCards" :key="index" v-show="show == 'Men'">
+                        <!-- img -->
                         <div class="preview-img"><img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
                                 <div class="add-details">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                         </div>
-                        description
+                        <!-- description -->
                         <div class="preview-description">
                             <span class="prod-name">{{card.product}}</span>
                             <br>
@@ -33,9 +33,9 @@
                             <br>
                             <span class="prod-cost"><span class="oldcost" v-if="card.oldcost">&#36;{{card.oldcost}}</span> &#36;{{card.cost}}</span>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- WOMEN -->
-                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewWomenCards" :key="index">
+                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewWomenCards" :key="index" v-show="show == 'Women'">
                         <!-- img -->
                         <div class="preview-img"><img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
@@ -66,7 +66,8 @@ import {store} from '../store'
         name: 'FeaturedProducts',
         data(){
             return {
-                store
+                store,
+                show: 'Men'
             }
         }
     }
@@ -122,9 +123,10 @@ section {
                     border-right: 1px solid $lightgray;
                     cursor: pointer;
 
-                    &:first-of-type {background-color: $white;}
-
                     &:hover {background-color: $white;}
+                }
+                .bgr-white {
+                    background-color: $white;
                 }
             }
             .preview-card {

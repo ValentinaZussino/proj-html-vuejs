@@ -96,18 +96,43 @@ export const store = reactive ({
     slideBestsellers: [
         {
             img: '/img/black_leather_jacket.jpg',
+            id: 1,
         },
         {
             img: '/img/spring_printed_dress.jpg',
+            id: 2,
         },
         {
             img: '/img/black_leather_suit.jpg',
+            id: 3,
         },
         {
             img: '/img/hipster_black_top.jpg',
+            id: 4,
         },
         {
             img: '/img/black_elegant_leather_jacket.jpg',
+            id: 5,
+        },
+        {
+            img: '/img/black_leather_jacket.jpg',
+            id: 1,
+        },
+        {
+            img: '/img/spring_printed_dress.jpg',
+            id: 2,
+        },
+        {
+            img: '/img/black_leather_suit.jpg',
+            id: 3,
+        },
+        {
+            img: '/img/hipster_black_top.jpg',
+            id: 4,
+        },
+        {
+            img: '/img/black_elegant_leather_jacket.jpg',
+            id: 5,
         }
     ],
     collections: [
