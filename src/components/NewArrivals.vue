@@ -57,6 +57,9 @@ import {store} from '../store';
                     });
                 }
             }
+        },
+        mounted(){
+            setInterval(()=> this.scrollRight(), 3500)
         }
     }
 </script>

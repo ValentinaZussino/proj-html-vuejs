@@ -46,17 +46,20 @@
                 if(this.counter < 1){
                     this.counter ++
                 } else {
-                    this.counter = 0
+                    this.counter = 0;
                 }
             },
             scrollLeft(){
-                if(this.counter > 1){
+                if(this.counter >= 1){
                     this.counter --
                 } else {
-                    this.counter = 0
+                    this.counter = 1;
                 }
             },
         },
+        mounted(){
+            setInterval(()=> this.scrollRight(), 3700)
+        }
     }
 </script>
 
