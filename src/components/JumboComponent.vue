@@ -1,8 +1,16 @@
 <template>
     <section>
         <!-- central container -->
-        <div class="new-collection-jumbo">
+        <div class="new-collection-jumbo" v-if="counter == 0">
             <h1>brand new arrivals</h1>
+            <p>new collection from newyork</p>
+            <div>
+                <button class="transp-btn-jumbo">view all</button>
+                <button class="transp-btn-jumbo">lookbook</button>
+            </div>
+        </div>
+        <div class="new-collection-jumbo" v-if="counter == 1">
+            <h1>hole</h1>
             <p>new collection from newyork</p>
             <div>
                 <button class="transp-btn-jumbo">view all</button>
@@ -14,12 +22,28 @@
             <div><i class="fa-solid fa-images"></i><span>Demos</span></div>
             <div><span><sup>&#36;</sup>39</span><span>On Sale</span></div>
         </div>
+        <!-- arrows -->
+        <div class="left-arrow" @click="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
+        <div class="right-arrow" @click="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
     </section>
 </template>
 
 <script>
     export default {
-        name: 'JumboComponent'
+        name: 'JumboComponent',
+        data() {
+            return {
+                counter: 0
+            }
+        },
+        methods: {
+            scrollRight(){
+                this.counter ++
+            },
+            scrollLeft(){
+                this.counter --
+            },
+        },
     }
 </script>
 
@@ -44,7 +68,6 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // border: 1px solid blue;
 
         h1 {font-weight: bold; text-transform: capitalize; font-size: 45px;}
 
@@ -95,6 +118,40 @@ section {
             }
         }
 
+    }
+    .left-arrow {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(0, 0, 0, 0.503);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        display: none;
+    }
+    .right-arrow {
+        width: 45px;
+        height: 45px;
+        background-color: rgba(0, 0, 0, 0.503);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        line-height: 45px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        cursor: pointer;
+        display: none;
+    }
+
+    &:hover .right-arrow, &:hover .left-arrow {
+        display: block;
     }
 }
 

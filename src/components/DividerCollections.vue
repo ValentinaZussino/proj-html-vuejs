@@ -35,13 +35,6 @@ section {
         position: relative;
         cursor: pointer;
 
-        img{
-            transition: 1s;
-
-            &:hover {
-                opacity: 0.75;
-            }
-        }
         .collection-text{
             position: absolute;
             bottom: 50px;
@@ -55,6 +48,8 @@ section {
             h3{ color: $white; font-size: 23px;}
 
             span { text-transform: uppercase; font-size: 11px; letter-spacing: 1px; padding: 0px 0px 15px 0px;}
+
+            button:hover { background-color: rgba(255, 255, 255, 0.23);}
         }
     }
 }

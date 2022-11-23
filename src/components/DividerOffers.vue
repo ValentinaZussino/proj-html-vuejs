@@ -64,6 +64,12 @@ section {
             img {
                 width: 100%;
                 height: 100%;
+                cursor: pointer;
+                transition: 1s;
+
+                &:hover {
+                    opacity: 0.78;
+                }
             }
 
             .offers-text{
