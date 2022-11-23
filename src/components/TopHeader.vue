@@ -39,6 +39,15 @@
     .header-icons {
         color: $textgraycolor;
         font-size: 14px;
+
+        i {
+            transition: 1s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
     }
     nav {
         color: rgb(144, 146, 141);

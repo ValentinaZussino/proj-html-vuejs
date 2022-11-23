@@ -125,6 +125,15 @@ section {
 
                 span {display: inline-block;}
             }
+            
+            i {
+                transition: 1s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            } 
         }
 
         .title {
@@ -173,6 +182,11 @@ section {
                 font-size: 12px;
                 border-bottom: 1px solid $textgraycolor;
                 padding: 10px 0;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $gray;
+                }
             }
         }
         .tags {
@@ -188,6 +202,11 @@ section {
                     border: 1px solid $textgraycolor;
                     margin-bottom: 5px;
                     margin-right: 5px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $blue;
+                    }
                 }   
             }
            
