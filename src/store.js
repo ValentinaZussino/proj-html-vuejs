@@ -37,7 +37,7 @@ export const store = reactive ({
         'Women',
         'Accesories'
     ],
-    previewCards: [
+    previewMenCards: [
         {
             img:'/img/black_elegant_leather_jacket.jpg',
             product:'black leather jacket',
@@ -63,6 +63,34 @@ export const store = reactive ({
             categories: 'Man, Jackets',
             cost: '96'
         },
+        
+    ],
+    previewWomenCards: [
+        {
+            img:'/img/hipster_black_top.jpg',
+            product:'hipster black top',
+            categories: 'T-Shirts, Women',
+            cost: '57'
+        },
+        {
+            img:'/img/spring_printed_dress.jpg',
+            product:'spring printed dress',
+            categories: 'Dress, Women',
+            cost: '47'
+        },
+        {
+            img:'/img/modern_love_tee.jpg',
+            product:'modern love tee',
+            categories: 'T-Shirts, Women',
+            cost: '68'
+        },
+        {
+            img:'/img/black_leather_jacket.jpg',
+            product:'black jacket',
+            categories: 'Woman, Jackets',
+            oldcost: '',
+            cost: '125'
+        }
         
     ],
     collections: [

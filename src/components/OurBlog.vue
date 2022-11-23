@@ -69,7 +69,7 @@ section {
                 overflow: hidden;
                 
                 img {
-                transition: 1s ease-in-out;
+                transition: 1.5s ease-in-out;
 
                     &:hover {
                         transform: scale(1.2);
