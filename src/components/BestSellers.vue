@@ -7,7 +7,7 @@
             </div>
             <!-- carousel -->
             <div class="carousel-container">
-                <div class="carousel-card" v-for="(slide, index) in store.previewWomenCards">
+                <div class="carousel-card" v-for="(slide, index) in store.slideBestsellers">
                     <img :src="slide.img" alt="" class="h-100">
                 </div>
                 <!-- arrows -->
@@ -36,12 +36,11 @@ import {store} from '../store';
 
 section {
     width: 100%;
-    height: 420px;
 
     div.vz_container {
         border-top: 2px solid $lightgray;
         padding-top: 100px;
-        margin: 70px auto;
+        margin: 100px auto;
         position: relative;
 
         .section-title {
@@ -53,7 +52,6 @@ section {
             top: -20px;
             left: 50%;
             transform: translate(-50%);
-            border: 1px solid green;
 
             p {
                 font-size: 13px;
@@ -62,14 +60,11 @@ section {
 
         .carousel-container {
             width: 100%;
-            // height: 80%;
             display: flex;
             position: relative;
-            border: 1px solid red;
 
             .carousel-card {
                 width: calc(100% / 5);
-                border: 1px solid blue;
             }
 
             .left-arrow {

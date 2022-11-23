@@ -93,6 +93,23 @@ export const store = reactive ({
         }
         
     ],
+    slideBestsellers: [
+        {
+            img: '/img/black_leather_jacket.jpg',
+        },
+        {
+            img: '/img/spring_printed_dress.jpg',
+        },
+        {
+            img: '/img/black_leather_suit.jpg',
+        },
+        {
+            img: '/img/hipster_black_top.jpg',
+        },
+        {
+            img: '/img/black_elegant_leather_jacket.jpg',
+        }
+    ],
     collections: [
         {
             img: '/img/winter_collection_bg.jpg',
