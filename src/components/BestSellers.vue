@@ -5,13 +5,28 @@
                 <h3>Best Sellers</h3>
                 <p>Must have products from our top sellers</p>
             </div>
+            <!-- carousel -->
+            <div class="carousel-container">
+                <div class="carousel-card" v-for="(slide, index) in store.previewWomenCards">
+                    <img :src="slide.img" alt="" class="h-100">
+                </div>
+                <!-- arrows -->
+                <div class="left-arrow">a</div>
+                <div class="right-arrow">a</div>
+            </div>
         </div>
     </section>
 </template>
 
 <script>
+import {store} from '../store';
     export default {
         name: 'BestSellers',
+        data() {
+            return {
+                store
+            }
+        },
     }
 </script>
 
@@ -25,6 +40,7 @@ section {
 
     div.vz_container {
         border-top: 2px solid $lightgray;
+        padding-top: 100px;
         margin: 70px auto;
         position: relative;
 
@@ -41,6 +57,44 @@ section {
 
             p {
                 font-size: 13px;
+            }
+        }
+
+        .carousel-container {
+            width: 100%;
+            // height: 80%;
+            display: flex;
+            position: relative;
+            border: 1px solid red;
+
+            .carousel-card {
+                width: calc(100% / 5);
+                border: 1px solid blue;
+            }
+
+            .left-arrow {
+                width: 50px;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.503);
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+            .right-arrow {
+                width: 50px;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.503);
+                color: white;
+                text-align: center;
+                line-height: 50px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
             }
         }
     }

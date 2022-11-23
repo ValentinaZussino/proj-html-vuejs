@@ -127,7 +127,7 @@ section {
             }
             
             i {
-                transition: 1s;
+                transition: 0.5s;
                 cursor: pointer;
 
                 &:hover {

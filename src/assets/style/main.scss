@@ -29,6 +29,7 @@ img {max-width: 100%;}
     width: 80%;
     // verifica poi se usati effettivamente tutti con m 0 auto allora spostare qui
 }
+button {white-space: nowrap;}
 .blue-btn {
     background-color: $blue;
     color: $white;
