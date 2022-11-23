@@ -1,20 +1,25 @@
 <template>
     <section>
         <!-- central container -->
-        <div class="new-collection-jumbo" v-if="counter == 0">
-            <h1>brand new arrivals</h1>
-            <p>new collection from newyork</p>
-            <div>
-                <button class="transp-btn-jumbo">view all</button>
-                <button class="transp-btn-jumbo">lookbook</button>
+        <!-- first jumbo -->
+        <div class="w-100 h-100 first-j" v-if="counter == 0">
+            <div class="new-collection-jumbo" >
+                <h1>brand new arrivals</h1>
+                <p>new collection from newyork</p>
+                <div>
+                    <button class="transp-btn-jumbo">view all</button>
+                    <button class="transp-btn-jumbo">lookbook</button>
+                </div>
             </div>
         </div>
-        <div class="new-collection-jumbo" v-if="counter == 1">
-            <h1>hole</h1>
-            <p>new collection from newyork</p>
-            <div>
-                <button class="transp-btn-jumbo">view all</button>
-                <button class="transp-btn-jumbo">lookbook</button>
+        <!-- second jumbo -->
+        <div class="w-100 h-100 second-j" v-if="counter == 1">
+            <div class="new-collection-jumbo" >
+                <h1>avada classic shop</h1>
+                <p>show your products with style</p>
+                <div>
+                    <button class="transp-btn-jumbo">get avada now</button>
+                </div>
             </div>
         </div>
         <!-- little squares -->
@@ -38,10 +43,18 @@
         },
         methods: {
             scrollRight(){
-                this.counter ++
+                if(this.counter < 1){
+                    this.counter ++
+                } else {
+                    this.counter = 0
+                }
             },
             scrollLeft(){
-                this.counter --
+                if(this.counter > 1){
+                    this.counter --
+                } else {
+                    this.counter = 0
+                }
             },
         },
     }
@@ -53,13 +66,21 @@
 section {
     height: 420px;
     width: 100%;
-    background-image: url('/img/home1_slide_three_bg_2.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: $white;
     position: relative;
 
+    .first-j {
+        background-image: url('/img/home1_slide_three_bg_2.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .second-j {
+        background-image: url('/img/home1_slide_one_bg.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .new-collection-jumbo {
         width: 50%;
         height: 100%;
