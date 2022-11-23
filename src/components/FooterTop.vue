@@ -205,7 +205,7 @@ section {
                     cursor: pointer;
 
                     &:hover {
-                        background-color: $blue;
+                        background-color: $hoverpeach;
                     }
                 }   
             }
