@@ -99,7 +99,7 @@ import {store} from '../store'
                             padding: 0;
                             
                            .child-li{
-                                padding: 10px 12px;
+                                padding: 12px 15px;
 
                                 &:hover {
                                     background-color: $softgray;

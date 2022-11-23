@@ -9,17 +9,17 @@ export const store = reactive ({
         },
         {
             title: 'Shop',
-            links: ['Link 1', 'Link 2', 'Link 3'],
+            links: ['Classic Shop', 'Collections', 'New Arrivals'],
             hover: false
         },
         {
             title: 'Products',
-            links: ['Link 1', 'Link 2', 'Link 3'],
+            links: ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5', 'Link 6'],
             hover: false
         },
         {
             title: 'Categories',
-            links: ['Link 1', 'Link 2', 'Link 3'],
+            links: ['Male', 'Women', 'Accesories'],
             hover: false
         },{
             title: 'News',
