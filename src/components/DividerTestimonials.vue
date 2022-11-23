@@ -1,6 +1,7 @@
 <template>
     <section>
-        <div class="vz_container">
+        <!-- testimonial 1 -->
+        <div class="vz_container" v-if="testim">
             <!-- img tesimonial -->
             <div class="testimonial-img">
                 <img src="/img/man_testimonial.png" alt="testimonial man">
@@ -10,8 +11,23 @@
             <div><span class="fw-bold">Dario Pineda, </span><span>Theme Fusion</span></div>
             <!-- circles -->
             <div class="d-flex">
-                <div class="circles"></div>
-                <div class="circles"></div>
+                <div class="circles" @click="this.testim = !this.testim" :class="{'bgr-white' : testim}"></div>
+                <div class="circles" @click="this.testim = !this.testim"></div>
+            </div>
+        </div>
+        <!-- testimonial 2 -->
+        <div class="vz_container" v-else>
+            <!-- img tesimonial -->
+            <div class="testimonial-img">
+                <img src="/img/woman_testimonial.png" alt="testimonial woman">
+            </div>
+            <!-- text and name and role -->
+            <p class="fst-italic">Curabitur non tristique tortor. Vestibulum aliquet suspicit ipsum in voluptat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consecutur est et nibh sadip hendrerit bibendum. In hac habitasse platea dictumst. Mauris consecutur est et nibh sadip hendrerit bibendum.</p>
+            <div><span class="fw-bold">Lisa Smith, </span><span>Theme Fusion</span></div>
+            <!-- circles -->
+            <div class="d-flex">
+                <div class="circles" @click="this.testim = !this.testim"></div>
+                <div class="circles" @click="this.testim = !this.testim" :class="{'bgr-white' : !testim}"></div>
             </div>
         </div>
     </section>
@@ -19,7 +35,17 @@
 
 <script>
     export default {
-        name: 'DividerTestimonilas'
+        name: 'DividerTestimonilas',
+        data() {
+            return {
+                testim: true
+            }
+        },
+        methods: {
+            changeTestim(){
+                this.testim = !this.testim;
+            }
+        },
     }
 </script>
 
@@ -29,14 +55,14 @@
 
 section{
     width: 100%;
-    height: 380px;
+    min-height: 380px;
     background-image: url('/img/testimonials_home_1_bg.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
 
     div.vz_container {
-        height: 190px;
+        min-height: 190px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -57,18 +83,19 @@ section{
         }
 
         div.circles {
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             border: 1px solid $white;
             transform: translate(-50%, -50%);
             margin-top: 20px;
-            margin-right: 5px;
-
-            &:first-of-type {
-                background-color: $white;
-            }
+            margin-right: 8px;
+            cursor: pointer;
         }
+    }
+
+    .bgr-white {
+        background-color: $white;
     }
 }
 
