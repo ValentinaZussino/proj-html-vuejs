@@ -29,7 +29,7 @@
         },
         props: {
             slides: Array,
-            numbImg: Number,
+            numbImg: String,
             overlay: Boolean,
             auto: Boolean
         },
@@ -64,7 +64,9 @@
                 clearInterval(this.myInterval)
             },
             start(){
-                this.myInterval = setInterval(() => this.scrollRight(), 3500);
+                if(this.auto){
+                    this.myInterval = setInterval(() => this.scrollRight(), 3500);
+                }
             }
         },
         mounted(){
