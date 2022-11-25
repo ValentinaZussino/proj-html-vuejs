@@ -116,23 +116,23 @@ export const store = reactive ({
         },
         {
             img: '/img/black_leather_jacket.jpg',
-            id: 1,
+            id: 6,
         },
         {
             img: '/img/spring_printed_dress.jpg',
-            id: 2,
+            id: 7,
         },
         {
             img: '/img/black_leather_suit.jpg',
-            id: 3,
+            id: 8,
         },
         {
             img: '/img/hipster_black_top.jpg',
-            id: 4,
+            id: 9,
         },
         {
             img: '/img/black_elegant_leather_jacket.jpg',
-            id: 5,
+            id: 10,
         }
     ],
     collections: [

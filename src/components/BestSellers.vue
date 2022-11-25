@@ -6,16 +6,7 @@
                 <p>Must have products from our top sellers</p>
             </div>
             <!-- carousel -->
-            <div class="position-relative overflow-hidden">
-                <div class="carousel-container" ref="carousel">
-                    <div class="carousel-card" v-for="(slide, index) in store.slideBestsellers">
-                        <img :src="slide.img" alt="" class="h-100">
-                    </div>
-                </div>
-                <!-- arrows -->
-                <div class="left-arrow" @click="scrollLeft()"><i class="fa-solid fa-chevron-left"></i></div>
-                <div class="right-arrow" @click="scrollRight()"><i class="fa-solid fa-chevron-right"></i></div>
-            </div>
+            <CarouselComponent :slides="store.slideBestsellers" numb-img="5"/>
         </div>
     </section>
 </template>
@@ -23,46 +14,47 @@
 <script>
 import { nextTick } from 'vue';
 import {store} from '../store';
+import CarouselComponent from './CarouselComponent.vue';
     export default {
-        name: 'BestSellers',
-        data() {
-            return {
-                store,
-                counter: 0
-            }
-        },
-        methods: {
-            scrollRight(){
-                if(this.counter < 5){
-                    this.counter++ ;
-                    this.$nextTick(()=>{
-                        this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
-                    });
-                } else {
-                    this.counter = 0 ;
-                    this.$nextTick(()=>{
-                        this.$refs.carousel.style.transform = null;
-                    });
-                }
-            },
-            scrollLeft(){
-                if(this.counter > 0){
-                    this.counter-- ;
-                    this.$nextTick(()=>{
-                        this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
-                    });
-                } else {
-                    this.$nextTick(() => { 
-                        this.$refs.carousel.style.transform = `translateX(80px)`; 
-                        setTimeout(() => this.$refs.carousel.style.transform = null, 200);
-                    });
-                }
-            }
-        },
-        mounted(){
-            
-        }
-    }
+    name: "BestSellers",
+    data() {
+        return {
+            store,
+            // counter: 0
+        };
+    },
+    // methods: {
+    //     scrollRight(){
+    //         if(this.counter < 5){
+    //             this.counter++ ;
+    //             this.$nextTick(()=>{
+    //                 this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
+    //             });
+    //         } else {
+    //             this.counter = 0 ;
+    //             this.$nextTick(()=>{
+    //                 this.$refs.carousel.style.transform = null;
+    //             });
+    //         }
+    //     },
+    //     scrollLeft(){
+    //         if(this.counter > 0){
+    //             this.counter-- ;
+    //             this.$nextTick(()=>{
+    //                 this.$refs.carousel.style.transform = `translateX(calc(-20% * ${this.counter}))`;
+    //             });
+    //         } else {
+    //             this.$nextTick(() => { 
+    //                 this.$refs.carousel.style.transform = `translateX(80px)`; 
+    //                 setTimeout(() => this.$refs.carousel.style.transform = null, 200);
+    //             });
+    //         }
+    //     }
+    // },
+    mounted() {
+    },
+    components: { CarouselComponent }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -93,44 +85,44 @@ section {
             }
         }
 
-        .carousel-container {
-            width: 100%;
-            display: flex;
-            transition: 1s;
+        // .carousel-container {
+        //     width: 100%;
+        //     display: flex;
+        //     transition: 1s;
 
-            .carousel-card {
-                width: calc(100% / 5);
-                flex-shrink: 0;
-            }
-        }
-        .left-arrow {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 0, 0, 0.503);
-            border-radius: 3px;
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
-            cursor: pointer;
-        }
-        .right-arrow {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 0, 0, 0.503);
-            border-radius: 3px;
-            color: white;
-            text-align: center;
-            line-height: 40px;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(0, -50%);
-            cursor: pointer;
-        }
+        //     .carousel-card {
+        //         width: calc(100% / 5);
+        //         flex-shrink: 0;
+        //     }
+        // }
+        // .left-arrow {
+        //     width: 40px;
+        //     height: 40px;
+        //     background-color: rgba(0, 0, 0, 0.503);
+        //     border-radius: 3px;
+        //     color: white;
+        //     text-align: center;
+        //     line-height: 40px;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 0;
+        //     transform: translate(0, -50%);
+        //     cursor: pointer;
+        // }
+        // .right-arrow {
+        //     width: 40px;
+        //     height: 40px;
+        //     background-color: rgba(0, 0, 0, 0.503);
+        //     border-radius: 3px;
+        //     color: white;
+        //     text-align: center;
+        //     line-height: 40px;
+        //     position: absolute;
+        //     top: 50%;
+        //     right: 0;
+        //     transform: translate(0, -50%);
+        //     cursor: pointer;
+        // }
     }
 }
 </style>
