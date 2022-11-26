@@ -6,18 +6,20 @@
                 <h3>Featured Products</h3>
                 <p>Must have products from our top sellers</p>
             </div>
+            <FeaturedCarousel :featured="store.featured"/>
+
             <!-- preview featured -->
-            <div class="featured">
+            <!-- <div class="featured"> -->
                 <!-- categories -->
-                <div class="tabs-categories">
+                <!-- <div class="tabs-categories">
                     <div v-for="(category, index) in store.previewCategories" :key="index" @click="show = category" :class="{'bgr-white' : category == show}">{{category}}</div>
-                </div>
+                </div> -->
                 <!-- preview -->
-                <div class="w-100 d-flex">
+                <!-- <div class="w-100 d-flex"> -->
                     <!-- MEN -->
-                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewMenCards" :key="index" v-show="show == 'Men'">
+                    <!-- <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewMenCards" :key="index" v-show="show == 'Men'"> -->
                         <!-- img -->
-                        <div class="preview-img">
+                        <!-- <div class="preview-img">
                             <img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
                                 <div class="add-details">
@@ -25,20 +27,20 @@
                                     <span><i class="fa-solid fa-bars pe-2"></i>Details</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- description -->
-                        <div class="preview-description">
+                        <!-- <div class="preview-description">
                             <span class="prod-name">{{card.product}}</span>
                             <br>
                             <span class="prod-categ">{{card.categories}}</span>
                             <br>
                             <span class="prod-cost"><span class="oldcost" v-if="card.oldcost">&#36;{{card.oldcost}}</span> &#36;{{card.cost}}</span>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                     <!-- WOMEN -->
-                    <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewWomenCards" :key="index" v-show="show == 'Women'">
+                    <!-- <div class="preview-card col-lg-3 " v-for="(card, index) in store.previewWomenCards" :key="index" v-show="show == 'Women'"> -->
                         <!-- img -->
-                        <div class="preview-img">
+                        <!-- <div class="preview-img">
                             <img :src="card.img" :alt="card.product">
                             <div class="vz_overlay">
                                 <div class="add-details">
@@ -46,9 +48,9 @@
                                     <span><i class="fa-solid fa-bars pe-2"></i>Details</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- description -->
-                        <div class="preview-description">
+                        <!-- <div class="preview-description">
                             <span class="prod-name">{{card.product}}</span>
                             <br>
                             <span class="prod-categ">{{card.categories}}</span>
@@ -56,23 +58,25 @@
                             <span class="prod-cost"><span class="oldcost" v-if="card.oldcost">&#36;{{card.oldcost}}</span> &#36;{{card.cost}}</span>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
     </section>
 </template>
 
 <script>
 import {store} from '../store'
+import FeaturedCarousel from './FeaturedCarousel.vue';
     export default {
-        name: 'FeaturedProducts',
-        data(){
-            return {
-                store,
-                show: 'Men'
-            }
-        }
-    }
+    name: "FeaturedProducts",
+    data() {
+        return {
+            store,
+            show: "Men"
+        };
+    },
+    components: { FeaturedCarousel }
+}
 </script>
 
 <style lang="scss" scoped>

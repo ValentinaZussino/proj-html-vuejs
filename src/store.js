@@ -32,67 +32,170 @@ export const store = reactive ({
             hover: false
         }
     ],
-    previewCategories: [
-        'Men',
-        'Women',
-        'Accesories'
-    ],
-    previewMenCards: [
+    featured : [
         {
-            img:'/img/black_elegant_leather_jacket.jpg',
-            product:'black leather jacket',
-            categories: 'Man, Jackets, Jeans',
-            oldcost: '235',
-            cost: '200'
+            section : 'Men',
+            previewCards : [
+                {
+                    img:'/img/black_elegant_leather_jacket.jpg',
+                    product:'black leather jacket',
+                    categories: 'Man, Jackets, Jeans',
+                    oldcost: '235',
+                    cost: '200'
+                },
+                {
+                    img:'/img/black_leather_suit.jpg',
+                    product:'black leather suit',
+                    categories: 'Man, Jackets',
+                    oldcost : '',
+                    cost: '176'
+                },
+                {
+                    img:'/img/blue_jacket_and_white_stripe_tee.jpg',
+                    product:'blue jacket & stripe tee',
+                    categories: 'Man, Jackets, Suits',
+                    oldcost : '',
+                    cost: '580'
+                },
+                {
+                    img:'/img/black_rebel_leather_jacket.jpg',
+                    product:'modern black leather suit',
+                    categories: 'Man, Jackets',
+                    oldcost : '',
+                    cost: '96'
+                },
+                
+            ]
         },
         {
-            img:'/img/black_leather_suit.jpg',
-            product:'black leather suit',
-            categories: 'Man, Jackets',
-            cost: '176'
-        },
-        {
-            img:'/img/blue_jacket_and_white_stripe_tee.jpg',
-            product:'blue jacket & stripe tee',
-            categories: 'Man, Jackets, Suits',
-            cost: '580'
-        },
-        {
-            img:'/img/black_rebel_leather_jacket.jpg',
-            product:'modern black leather suit',
-            categories: 'Man, Jackets',
-            cost: '96'
-        },
-        
-    ],
-    previewWomenCards: [
-        {
-            img:'/img/hipster_black_top.jpg',
-            product:'hipster black top',
-            categories: 'T-Shirts, Women',
-            cost: '57'
-        },
-        {
-            img:'/img/spring_printed_dress.jpg',
-            product:'spring printed dress',
-            categories: 'Dress, Women',
-            cost: '47'
-        },
-        {
-            img:'/img/modern_love_tee.jpg',
-            product:'modern love tee',
-            categories: 'T-Shirts, Women',
-            cost: '68'
-        },
-        {
-            img:'/img/black_leather_jacket.jpg',
-            product:'black jacket',
-            categories: 'Woman, Jackets',
-            oldcost: '',
-            cost: '125'
+            section : 'Women',
+            previewCards : [
+                {
+                    img:'/img/hipster_black_top.jpg',
+                    product:'hipster black top',
+                    categories: 'T-Shirts, Women',
+                    oldcost : '',
+                    cost: '57'
+                },
+                {
+                    img:'/img/spring_printed_dress.jpg',
+                    product:'spring printed dress',
+                    categories: 'Dress, Women',
+                    oldcost : '',
+                    cost: '47'
+                },
+                {
+                    img:'/img/modern_love_tee.jpg',
+                    product:'modern love tee',
+                    categories: 'T-Shirts, Women',
+                    oldcost : '',
+                    cost: '68'
+                },
+                {
+                    img:'/img/black_leather_jacket.jpg',
+                    product:'black jacket',
+                    categories: 'Woman, Jackets',
+                    oldcost: '',
+                    cost: '125'
+                }
+                
+            ]
+        },{
+            section : 'Accessories',
+            previewCards : [
+                {
+                    img:'/img/casual_leather_belts.jpg',
+                    product:'casual leather belts',
+                    categories: 'Accessories, Men',
+                    oldcost : '',
+                    cost: '65'
+                },
+                {
+                    img:'/img/leather_gloves.jpg',
+                    product:'leather gloves',
+                    categories: 'Accessories, Gloves, Men, Women',
+                    oldcost : '',
+                    cost: '45'
+                },
+                {
+                    img:'/img/modern_leather_boots.jpg',
+                    product:'modern leather boots',
+                    categories: 'Accessories, Men, Miscellaneous, Shoes',
+                    oldcost : '50',
+                    cost: '30'
+                },
+                {
+                    img:'/img/brown_dress_shoes.jpg',
+                    product:'brown dress shoes',
+                    categories: 'Accessories, Women, Miscellaneous, Shoes',
+                    oldcost: '46',
+                    cost: '36'
+                }
+                
+            ]
         }
-        
     ],
+    // previewCategories: [
+    //     'Men',
+    //     'Women',
+    //     'Accesories'
+    // ],
+    // previewMenCards: [
+    //     {
+    //         img:'/img/black_elegant_leather_jacket.jpg',
+    //         product:'black leather jacket',
+    //         categories: 'Man, Jackets, Jeans',
+    //         oldcost: '235',
+    //         cost: '200'
+    //     },
+    //     {
+    //         img:'/img/black_leather_suit.jpg',
+    //         product:'black leather suit',
+    //         categories: 'Man, Jackets',
+    //         cost: '176'
+    //     },
+    //     {
+    //         img:'/img/blue_jacket_and_white_stripe_tee.jpg',
+    //         product:'blue jacket & stripe tee',
+    //         categories: 'Man, Jackets, Suits',
+    //         cost: '580'
+    //     },
+    //     {
+    //         img:'/img/black_rebel_leather_jacket.jpg',
+    //         product:'modern black leather suit',
+    //         categories: 'Man, Jackets',
+    //         cost: '96'
+    //     },
+        
+    // ],
+    // previewWomenCards: [
+    //     {
+    //         img:'/img/hipster_black_top.jpg',
+    //         product:'hipster black top',
+    //         categories: 'T-Shirts, Women',
+    //         cost: '57'
+    //     },
+    //     {
+    //         img:'/img/spring_printed_dress.jpg',
+    //         product:'spring printed dress',
+    //         categories: 'Dress, Women',
+    //         cost: '47'
+    //     },
+    //     {
+    //         img:'/img/modern_love_tee.jpg',
+    //         product:'modern love tee',
+    //         categories: 'T-Shirts, Women',
+    //         cost: '68'
+    //     },
+    //     {
+    //         img:'/img/black_leather_jacket.jpg',
+    //         product:'black jacket',
+    //         categories: 'Woman, Jackets',
+    //         oldcost: '',
+    //         cost: '125'
+    //     }
+        
+    // ],
     slideBestsellers: [
         {
             img: '/img/black_leather_jacket.jpg',
